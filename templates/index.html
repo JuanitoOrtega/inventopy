@@ -5,6 +5,22 @@
     <title>{{ name }}</title>
 </head>
 <body>
+    <h1>
+        Mi primera página web
+    </h1>
+
+    {% block content %}
+
+        <a href="{% url 'erp:vista2' %}">Click</a>
+
+    <ul>
+        {% for category in categories %}
+            <li>
+                {{ category.id }} / {{ category.name }}
+            </li>
+        {% endfor %}
+    </ul>
+    {% endblock %}
     <p>{{ name }}</p>
 </body>
 </html>

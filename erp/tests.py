@@ -1,29 +1,17 @@
 from config.wsgi import *
 from erp.models import *
 
-# LISTAR
+data = [
+    'Leche y derivados',
+    'Carnes, pescados y huevos',
+    'Patatas, legumbres, frutos secos',
+    'Verduras y Hortalizas',
+    'Frutas',
+    'Cereales y derivados, azúcar y dulces',
+    'Grasas, aceite y mantequilla'
+]
 
-# query = Type.objects.all()
-# print(query)
-
-# INSERTAR
-# t = Type()
-# t.name = 'Accionista'
-# t.save()
-
-# EDITAR
-
-# t = Type.objects.get(pk=1)
-# t.name = 'Presidente'
-# t.save()
-
-# ELIMINAR
-# t = Type.objects.get(pk=1)
-# t.delete()
-
-# obj = Type.objects.filter(name__icontains='terry')
-
-# obj = Employee.objects.filter()
-#
-# for i in Type.objects.filter():
-#     print(i.name)
+for i in data:
+    cat = Category(name=i)
+    cat.save()
+    print('Guardado con registro Nro.{}'.format(cat.id))

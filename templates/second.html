@@ -2,13 +2,11 @@
 
 {% block content %}
 
-    <a href="{% url 'erp:vista1' %}">Click</a>
+    <a href="{% url 'erp:vista2' %}">Click</a>
 
     <ul>
-    {% for product in products %}
-        <li>
-            {{ product.id }} / {{ product.name }} / {{ product.cate.name }}
-        </li>
-    {% endfor %}
+        {% for product in products %}
+            <li>{{ product.id }} / {{ product.name }} / {{ product.cate.name }}</li>
+        {% endfor %}
     </ul>
 {% endblock %}
